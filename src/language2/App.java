@@ -8,7 +8,6 @@ public class App {
         Lang lang = null;
         char check = ' ';
 
-
         while (check !='N'){
             System.out.println("언어를 선택하세요. 1.한국어 2.영어 3.일본어");
             int q1 = input.nextInt();
@@ -33,18 +32,16 @@ public class App {
                     lang.introduce();
                     break;
                 case 3 :
-                    lang.greeting();
+                    lang.chat();
                     break;
             }
             System.out.println("다시하시겠습니까? Y/N");
-            input.next().charAt(0);
+            check = input.next().charAt(0);
             if (check == 'N'){
                 break;
             }
 
         }
-
-
 
     }
 }
