@@ -2,14 +2,18 @@ package language;
 
 public class Korean extends LanguagePack {
 
-	private String korean;
-	
-	public Korean(String korean) {
-		this.korean = korean;
+	@Override
+	public void greeting() {
+		System.out.println("안녕하세요");
 	}
-	
-	public void output() {
-		System.out.println(korean+" = 1.인사말 2.자기소개 3.하고픈말");
+
+	@Override
+	public void introduce() {
+		System.out.println("나는 홍진혁입니다.");
 	}
-	
+
+	@Override
+	public void chat() {
+		System.out.println("자바는 어려워");
+	}
 }

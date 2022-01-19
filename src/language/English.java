@@ -3,13 +3,19 @@ package language;
 public class English extends LanguagePack {
 	
 private String english;
-	
-	public English(String english) {
-		this.english = english;
-	}
-	
-	public void output() {
-		System.out.println(english+" = 1.인사말 2.자기소개 3.하고픈말");
+
+	@Override
+	public void greeting() {
+		System.out.println("Hello");
 	}
 
+	@Override
+	public void introduce() {
+		System.out.println("I'm Jinhyuk.");
+	}
+
+	@Override
+	public void chat() {
+		System.out.println("Java is hard.");
+	}
 }
