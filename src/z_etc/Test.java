@@ -9,7 +9,7 @@ class MyForm {
     Frame f;
     Button b;
 
-    MyForm(){
+    MyForm(){ //생성자
         f = new Frame("나의 첫 화면"); // 프레임 창 제목
         b = new Button("Ok");
     }
