@@ -21,7 +21,8 @@ public class MainApp {
                     lang2 = new Jap2();
                     break ;
                 default:
-                    break OUTTER;
+                    System.out.println("잘못 입력 하셨습니다.");
+                    continue OUTTER;
             }
             System.out.println("메시지를 선택하세요 (1.인사말 2.자기소개 3.하고픈말) > ");
             int select2 = input.nextInt();
@@ -37,7 +38,8 @@ public class MainApp {
                     lang2.chat();
                     break ;
                 default:
-                    break OUTTER;
+                    System.out.println("잘못 입력 하셨습니다.");
+                    continue OUTTER;
             }
             System.out.println("다시하시겠습니까? Y/N");
             String replay = input.next();
@@ -45,6 +47,9 @@ public class MainApp {
                 continue OUTTER;
             } else if (replay.equals("N")){
                 break OUTTER;
+            } else {
+                System.out.println("잘못 입력 하셨습니다.");
+                System.exit(0);
             }
             input.close();
         }

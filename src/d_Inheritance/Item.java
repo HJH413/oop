@@ -1,6 +1,6 @@
 package d_Inheritance;
 
-public class Item {
+public abstract class Item {
 	
 	protected int number;        //상속을 해줄때는 protected로 
 	protected String title;
@@ -15,10 +15,10 @@ public class Item {
 		System.out.println("부모의 인자 있는 생성자");
 	}
 	
-	public void output() {  //호출하는거
-		System.out.println("번호: " + number + ", 제목: " + title);
-		
-	}
+	public abstract void output(); // 함수선언 abstract 미완성이라는 신호
+
+	//public void output(){};// 완벽한 함수 구현
+	// abstract 사용할때에는 클래스에도 넣어야함
 }
 
 
@@ -26,3 +26,8 @@ public class Item {
 //상속 하는 이유
 //여러 클래스에서 중복되는 것들을 한번에 관리하기
 //
+
+// {  //호출하는거
+//		 System.out.println("번호: " + number + ", 제목: " + title);
+//
+//		 }
